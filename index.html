@@ -41,7 +41,6 @@
             margin-bottom: 20px;
             width: 100%;
             max-width: 480px;
-            position: relative;
         }
 
         header h1 {
@@ -146,19 +145,24 @@
             border: 1px dashed var(--neon-purple);
         }
 
-        /* 5. Tienda */
-        .store-item {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 12px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Pack Tienda */
+        .pack-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed var(--neon-pink);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
         }
 
-        /* 6. Mercado Virtual Army (9 Casillas) */
+        .pack-list {
+            text-align: left;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+        }
+
+        /* Mercado Virtual Army (9 Casillas) */
         .market-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -194,7 +198,7 @@
             font-size: 0.7rem;
         }
 
-        /* 7. Galería Fondos BTS */
+        /* Galería Fondos BTS */
         .carousel-box {
             display: flex;
             gap: 10px;
@@ -225,7 +229,7 @@
             border-radius: 8px;
         }
 
-        /* Chat Flotante XAT Embed Integrado */
+        /* Chat Flotante XAT */
         .float-chat-trigger {
             position: fixed;
             bottom: 20px;
@@ -316,15 +320,6 @@
             margin: 20px 0;
             line-height: 1.6;
         }
-
-        .shield-btn {
-            background: none;
-            border: none;
-            color: var(--neon-gold);
-            cursor: pointer;
-            font-size: 1.1rem;
-            vertical-align: middle;
-        }
     </style>
 </head>
 <body>
@@ -354,21 +349,21 @@
         <button class="btn-action" onclick="publicarMuro()">Enviar al Muro</button>
     </div>
 
-    <!-- 2. ZONA DE BTS (TRIVIA) -->
+    <!-- 2. ZONA DE BTS (TRIVIA 6 PREGUNTAS) -->
     <div class="card">
         <h2 class="card-title"><i class="fas fa-star"></i> Zona de BTS: Trivia Oficial</h2>
-        <p style="font-size:0.85rem; color:#cbd5e1; margin-bottom:12px;">Pon a prueba tus conocimientos sobre canciones, historia y miembros de BTS (8 Preguntas).</p>
+        <p style="font-size:0.85rem; color:#cbd5e1; margin-bottom:12px;">Demuestra tu nivel ARMY en esta Trivia de 6 Preguntas.</p>
         <button class="btn-action" onclick="iniciarTriviaBTS()">Comenzar Trivia BTS 🌟</button>
     </div>
 
-    <!-- 3. COMPATIBILIDAD CON LOS INTEGRANTES -->
+    <!-- 3. COMPATIBILIDAD CON LOS INTEGRANTES (6 PREGUNTAS) -->
     <div class="card">
         <h2 class="card-title"><i class="fas fa-heart"></i> Descubre tu Compatibilidad con BTS</h2>
-        <p style="font-size:0.85rem; color:#cbd5e1; margin-bottom:12px;">Test exclusivo: Preguntas intensas, ardientes y misteriosas con los chicos.</p>
+        <p style="font-size:0.85rem; color:#cbd5e1; margin-bottom:12px;">Test interactivo de 6 preguntas ardientes y exclusivas con los chicos.</p>
         <button class="btn-action" style="background:linear-gradient(45deg, var(--neon-pink), var(--neon-gold));" onclick="iniciarCompatibilidadBTS()">Iniciar Test Ardiente 🔥</button>
     </div>
 
-    <!-- 4. REPRODUCTOR RADIO BTS -->
+    <!-- 4. REPRODUCTOR RADIO BTS EN VIVO -->
     <div class="card">
         <h2 class="card-title"><i class="fas fa-radio"></i> Radio BTS en Vivo</h2>
         <audio controls style="width:100%; margin-top:5px;">
@@ -377,29 +372,18 @@
         </audio>
     </div>
 
-    <!-- 5. TIENDA RECURSOS OFICIALES DIGITALES -->
+    <!-- 5. TIENDA RECURSOS DIGITALES (PACK UNIFICADO) -->
     <div class="card">
         <h2 class="card-title"><i class="fas fa-store"></i> Tienda Recursos Digitales BTS</h2>
-        
-        <div class="store-item">
-            <div>
-                <strong>Libros BTS (PDF) 📚</strong><br><small style="color:#aaa;">Colección Exclusiva</small>
+        <div class="pack-box">
+            <h3 style="color:var(--neon-gold);">Pack de BTS ARMY</h3>
+            <div class="pack-list">
+                📌 <b>LIBRO BTS PDF</b> (Colección Exclusiva)<br>
+                📌 <b>AFICHES BTS</b> (Diseños HD)<br>
+                📌 <b>ADHESIVO BTS</b> (Stickers para Imprimir)
             </div>
-            <button class="btn-action" style="width:auto; padding:8px 14px;" onclick="abrirPagoModal('Libros BTS (PDF) 📚', '2.50$')">Comprar</button>
-        </div>
-        
-        <div class="store-item">
-            <div>
-                <strong>Afiches BTS 🎨</strong><br><small style="color:#aaa;">Diseños HD Listos</small>
-            </div>
-            <button class="btn-action" style="width:auto; padding:8px 14px;" onclick="abrirPagoModal('Afiches BTS 🎨', '2.50$')">Comprar</button>
-        </div>
-
-        <div class="store-item">
-            <div>
-                <strong>Adhesivos BTS ✨</strong><br><small style="color:#aaa;">Stickers Digitales</small>
-            </div>
-            <button class="btn-action" style="width:auto; padding:8px 14px;" onclick="abrirPagoModal('Adhesivos BTS ✨', '2.50$')">Comprar</button>
+            <p style="font-size:1.1rem; font-weight:bold; color:var(--neon-green); margin-bottom:10px;">Precio: 2.50$</p>
+            <button class="btn-action" onclick="abrirPagoModal()">Comprar Pack Completo</button>
         </div>
     </div>
 
@@ -490,11 +474,10 @@
         </div>
     </div>
 
-    <!-- MODAL DE PAGO -->
+    <!-- MODAL DE PAGO DIRECTO A WHATSAPP -->
     <div class="modal-overlay" id="modalPagoOverlay">
         <div class="modal-body-content">
-            <h3 style="color:var(--neon-green); text-align:center; margin-bottom:10px;"><i class="fas fa-file-invoice-dollar"></i> Registro de Pago</h3>
-            <p id="productoComprando" style="font-weight:bold; text-align:center; color:var(--neon-gold); margin-bottom:10px;"></p>
+            <h3 style="color:var(--neon-green); text-align:center; margin-bottom:10px;"><i class="fas fa-file-invoice-dollar"></i> Pack de BTS ARMY — 2.50$</h3>
             
             <div style="background:rgba(255,255,255,0.06); padding:12px; border-radius:12px; margin-bottom:12px; font-size:0.85rem; line-height:1.5;">
                 <p><strong>🏦 Pago Móvil (Venezuela):</strong></p>
@@ -508,187 +491,19 @@
                 <p>Zinli: <b>ymvs2000@gmail.com</b></p>
             </div>
 
-            <label style="font-size:0.8rem;">Número de Referencia o Comprobante:</label>
-            <input type="text" id="referenciaPago" class="input-custom" placeholder="Ingresa los datos de tu pago...">
-            
-            <button class="btn-action" style="background:var(--neon-green);" onclick="enviarPagoYDescargar()">Enviar el Pago y Descargar</button>
+            <label style="font-size:0.8rem;">Nombre del Comprador/a:</label>
+            <input type="text" id="nombreComprador" class="input-custom" placeholder="Tu Nombre...">
+
+            <label class="file-upload-label" style="margin-top:5px;">
+                <i class="fas fa-paperclip"></i> Insertar Comprobante (Imagen)
+                <input type="file" id="comprobanteFoto" accept="image/*" style="display:none;" onchange="cargadoComprobante(this)">
+            </label>
+            <div id="avisoComprobante" style="font-size:0.75rem; color:var(--neon-green); margin-bottom:8px; display:none;">✓ Comprobante listo para enviar</div>
+
+            <button class="btn-action" style="background:#22c55e;" onclick="enviarPagoWhatsApp()">Enviar Pago por WhatsApp 📲</button>
             <button class="btn-action" style="background:#4b5563; margin-top:5px;" onclick="cerrarModal('modalPagoOverlay')">Cancelar</button>
         </div>
     </div>
 
-    <!-- MODAL DE JUEGOS Y TRAMITES -->
-    <div class="modal-overlay" id="modalJuegoOverlay">
-        <div class="modal-body-content" id="cuerpoJuegoModal"></div>
-    </div>
-
-    <!-- MODAL PANEL CREADOR (ESCUDO) -->
-    <div class="modal-overlay" id="modalCreadorOverlay">
-        <div class="modal-body-content">
-            <h3 style="color:var(--neon-gold); text-align:center; margin-bottom:10px;">👑 Panel de Creador</h3>
-            <p style="font-size:0.85rem; color:#aaa; margin-bottom:8px;">Enlace de entrega de Google Drive:</p>
-            <input type="text" id="driveUrlInput" class="input-custom" value="https://drive.google.com/drive/u/0/my-drive">
-            <button class="btn-action" onclick="guardarDriveUrl()">Guardar Enlace</button>
-            <button class="btn-action" style="background:#4b5563; margin-top:5px;" onclick="cerrarModal('modalCreadorOverlay')">Cerrar</button>
-        </div>
-    </div>
-
-    <footer>
-        Copyright 2026 Derecho reservado @creative Ymvs | BTS Army Portal 
-        <button class="shield-btn" onclick="accesoCreador()" title="Panel Creador">🛡️</button>
-    </footer>
-
-    <script>
-        // Muro Army con foto local
-        let fotoMuroBase64 = "";
-        function cargarFotoMuro(input) {
-            if (input.files && input.files[0]) {
-                let reader = new FileReader();
-                reader.onload = function(e) {
-                    fotoMuroBase64 = e.target.result;
-                    document.getElementById('avisoFotoMuro').style.display = 'block';
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        function publicarMuro() {
-            let user = document.getElementById('muroUsuario').value || 'ARMY_Anonimo';
-            let msg = document.getElementById('muroMensaje').value;
-
-            if(!msg && !fotoMuroBase64) {
-                alert('Escribe un mensaje o sube una foto para publicar en el muro.');
-                return;
-            }
-
-            let lista = document.getElementById('listaMuro');
-            let item = document.createElement('div');
-            item.className = 'chat-item';
-            
-            let contenido = `<strong>@${user}:</strong> ${msg}`;
-            if(fotoMuroBase64) {
-                contenido += `<br><img src="${fotoMuroBase64}">`;
-            }
-            item.innerHTML = contenido;
-            lista.prepend(item);
-
-            document.getElementById('muroMensaje').value = '';
-            document.getElementById('muroArchivo').value = '';
-            fotoMuroBase64 = "";
-            document.getElementById('avisoFotoMuro').style.display = 'none';
-        }
-
-        // Chat Flotante
-        function toggleChatFlotante() {
-            let box = document.getElementById('chatFlotanteBox');
-            box.style.display = (box.style.display === 'flex') ? 'none' : 'flex';
-        }
-
-        // Tienda y Pago
-        function abrirPagoModal(prod, precio) {
-            document.getElementById('productoComprando').innerText = `${prod} — ${precio}`;
-            document.getElementById('modalPagoOverlay').style.display = 'flex';
-        }
-
-        function enviarPagoYDescargar() {
-            let ref = document.getElementById('referenciaPago').value;
-            if(!ref) {
-                alert('Por favor ingresa tu número de referencia o comprobante.');
-                return;
-            }
-            alert('¡Pago registrado con éxito! Abriendo enlace de descarga en Google Drive...');
-            let driveLink = document.getElementById('driveUrlInput').value;
-            window.open(driveLink, '_blank');
-            cerrarModal('modalPagoOverlay');
-        }
-
-        // Acceso Creador Escudo (🛡️)
-        function accesoCreador() {
-            let u = prompt('Usuario Creador:');
-            if(u === null) return;
-            let p = prompt('Clave Secreta:');
-            if(p === null) return;
-
-            if(u.trim() === 'Creativeymvs' && p.trim() === '123123$+') {
-                document.getElementById('modalCreadorOverlay').style.display = 'flex';
-            } else {
-                alert('Usuario o clave incorrectos.');
-            }
-        }
-
-        function guardarDriveUrl() {
-            alert('¡Enlace de Google Drive guardado correctamente!');
-            cerrarModal('modalCreadorOverlay');
-        }
-
-        function cerrarModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        // Trivia BTS Interactiva
-        function iniciarTriviaBTS() {
-            let cuerpo = document.getElementById('cuerpoJuegoModal');
-            cuerpo.innerHTML = `
-                <h3 style="color:var(--neon-purple); text-align:center; margin-bottom:10px;">🌟 Trivia BTS Oficial</h3>
-                <p style="font-size:0.9rem; margin-bottom:10px;"><b>Pregunta 1:</b> ¿En qué año debutó BTS?</p>
-                <button class="btn-action" style="background:#1f2937;" onclick="finTrivia(100)">A) 2013 (¡Correcto!)</button>
-                <button class="btn-action" style="background:#1f2937;" onclick="finTrivia(50)">B) 2015</button>
-                <button class="btn-action" style="background:#4b5563; margin-top:10px;" onclick="cerrarModal('modalJuegoOverlay')">Cerrar</button>
-            `;
-            document.getElementById('modalJuegoOverlay').style.display = 'flex';
-        }
-
-        function finTrivia(puntaje) {
-            let cuerpo = document.getElementById('cuerpoJuegoModal');
-            cuerpo.innerHTML = `
-                <h3 style="color:var(--neon-gold); text-align:center;">¡Resultado de la Trivia!</h3>
-                <p style="text-align:center; font-size:1.5rem; margin:15px 0;">Puntuación: ${puntaje}% 🌟</p>
-                <button class="btn-action" onclick="alert('Descargando imagen del resultado...');">Descargar Resultado</button>
-                <button class="btn-action" style="background:#22c55e;" onclick="window.open('https://api.whatsapp.com/send?text=¡Obtuve ${puntaje}%25 en la Trivia BTS de @creativeymvs!', '_blank')">Compartir en WhatsApp</button>
-                <button class="btn-action" style="background:#4b5563; margin-top:8px;" onclick="cerrarModal('modalJuegoOverlay')">Cerrar</button>
-            `;
-        }
-
-        // Test Compatibilidad Ardiente BTS
-        function iniciarCompatibilidadBTS() {
-            let cuerpo = document.getElementById('cuerpoJuegoModal');
-            cuerpo.innerHTML = `
-                <h3 style="color:var(--neon-pink); text-align:center; margin-bottom:10px;">🔥 Test Compatibilidad ARMY</h3>
-                <input type="text" id="nombreUsuarioTest" class="input-custom" placeholder="Tu Nombre / Apodo...">
-                <p style="font-size:0.85rem; margin:8px 0;">¿Cuál es tu estilo ideal para una cita nocturna con tu bias?</p>
-                <button class="btn-action" style="background:#1f2937;" onclick="calcularCompatibilidadResult('Jungkook')">A) Bajo las estrellas escuchando música 💫</button>
-                <button class="btn-action" style="background:#1f2937;" onclick="calcularCompatibilidadResult('V')">B) Galería de arte y misterio nocturno 😈</button>
-                <button class="btn-action" style="background:#4b5563; margin-top:10px;" onclick="cerrarModal('modalJuegoOverlay')">Cerrar</button>
-            `;
-            document.getElementById('modalJuegoOverlay').style.display = 'flex';
-        }
-
-        function calcularCompatibilidadResult(integrante) {
-            let nombre = document.getElementById('nombreUsuarioTest').value || 'ARMY';
-            let emojis = ['🔥', '😈', '😘', '💫', '💥', '❤️', '🩵'];
-            let randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-            let percent = Math.floor(Math.random() * 15) + 85;
-
-            let frasesSensuales = [
-                "La conexión bajo la luz de la luna fue electrizante y secreta.",
-                "Una mirada intensa que dejó claro que el destino ya estaba escrito.",
-                "Susurros al oído y una química imposible de ignorar esta noche."
-            ];
-            let fraseAleatoria = frasesSensuales[Math.floor(Math.random() * frasesSensuales.length)];
-
-            let cuerpo = document.getElementById('cuerpoJuegoModal');
-            cuerpo.innerHTML = `
-                <h3 style="color:var(--neon-gold); text-align:center;">¡Resultado de Compatibilidad! ${randomEmoji}</h3>
-                <div style="background:rgba(255,255,255,0.06); padding:12px; border-radius:12px; margin:10px 0; font-size:0.85rem; line-height:1.5;">
-                    <p><b>Usuaria:</b> ${nombre}</p>
-                    <p><b>Integrante:</b> ${integrante} ${randomEmoji}</p>
-                    <p><b>Compatibilidad:</b> <span style="color:var(--neon-green); font-weight:bold;">${percent}%</span></p>
-                    <p style="margin-top:6px; font-style:italic; color:#fbcfe8;">"${fraseAleatoria}"</p>
-                </div>
-                <button class="btn-action" onclick="alert('Descargando tarjeta de compatibilidad...');">Descargar Imagen Resultado</button>
-                <button class="btn-action" style="background:#22c55e;" onclick="window.open('https://api.whatsapp.com/send?text=¡Mi compatibilidad con ${integrante} en el Portal BTS fue ${percent}% ${randomEmoji}!', '_blank')">Compartir en Redes 📲</button>
-                <button class="btn-action" style="background:#4b5563; margin-top:8px;" onclick="cerrarModal('modalJuegoOverlay')">Cerrar</button>
-            `;
-        }
-    </script>
-</body>
-</html>
+    <!-- MODAL DE JUEGOS Y TRIVIA -->
+    <div class="modal-overlay" id="moda
